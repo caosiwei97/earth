@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+node_modules
+target
+scratch
+private
+*.iml
+.vscode
+dist
