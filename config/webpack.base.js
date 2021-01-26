@@ -2,7 +2,7 @@
  * @Author: caosiwei
  * @Date: 2021-01-21 16:46:07
  * @Last Modified by: caosiwei
- * @Last Modified time: 2021-01-25 15:00:44
+ * @Last Modified time: 2021-01-26 13:42:35
  */
 
 const path = require('path')
@@ -11,9 +11,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const baseConfig = {
-  entry: path.join(APP_PATH, 'main.js'),
+  entry: {
+    earth: path.join(APP_PATH, 'main.js')
+  },
   output: {
-    filename: 'earth.bundle.js',
+    filename: 'js/[name].bundle.js',
     path: DIST_PATH
   },
   module: {
@@ -38,11 +40,13 @@ const baseConfig = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        type: 'asset'
       }
     ]
   },
-  resolve: getResolveConfig(),
+  resolve: getResolveConfig({
+    'assets': resolve('src/assets')
+  }),
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({

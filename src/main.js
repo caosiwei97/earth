@@ -1,24 +1,15 @@
 /*
  * @Author: caosiwei 
  * @Date: 2021-01-25 15:05:44 
- * @Last Modified by:   caosiwei 
- * @Last Modified time: 2021-01-25 15:05:44 
- */
-
-/**
- * earth - a project to visualize global air data.
- *
- * Copyright (c) 2014 Cameron Beccario
- * The MIT License - http://opensource.org/licenses/MIT
- *
- * https://github.com/cambecc/earth
+ * @Last Modified by: caosiwei
+ * @Last Modified time: 2021-01-26 13:22:23
  */
 
 import when from 'when'
 import µ from '@/utils/micro'
 import globes from '@/utils/globes'
 import products from '@/utils/products'
-import '@/assets/css/styles.css'
+import 'assets/css/styles.css'
 
 var SECOND = 1000
 var MINUTE = 60 * SECOND
